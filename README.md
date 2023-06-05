@@ -1,9 +1,9 @@
 # openfractal-client
 
-[![test](https://github.com/valence-platform/openfractal-client/actions/workflows/test.yml/badge.svg)](https://github.com/valence-platform/openfractal-client/actions/workflows/test.yml)
-[![release-new-version](https://github.com/valence-platform/openfractal-client/actions/workflows/release-new-version.yml/badge.svg)](https://github.com/valence-platform/openfractal-client/actions/workflows/release-new-version.yml)
-[![docker](https://github.com/valence-platform/openfractal-client/actions/workflows/docker.yml/badge.svg)](https://github.com/valence-platform/openfractal-client/actions/workflows/docker.yml)
-[![code-check](https://github.com/valence-platform/openfractal-client/actions/workflows/code-check.yml/badge.svg)](https://github.com/valence-platform/openfractal-client/actions/workflows/code-check.yml)
+[![test](https://github.com/openfractal/openfractal-client/actions/workflows/test.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/test.yml)
+[![release-new-version](https://github.com/openfractal/openfractal-client/actions/workflows/release-new-version.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/release-new-version.yml)
+[![docker](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml)
+[![code-check](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml)
 
 A Python client based on [QCPortal](https://github.com/MolSSI/QCFractal) for Open Drug Discovery (ODD) QM large scale data generation.
 
