@@ -43,12 +43,14 @@ jobs:
 
           TAG_OR_BRANCH_NAME=${GITHUB_REF##*/}
 
-          if [ $TAG_OR_BRANCH_NAME = "main" ]; then
-            echo "Build and deploy the doc on main"
-            mike deploy --push --force main
-          else
-            echo "Build and deploy the doc on $TAG_OR_BRANCH_NAME"
+          # NOTE(hadim): DISABLE FOR NOW SINCE THE REPO MUST BE MADE PUBLIC FIRST.
 
-            mike deploy --push --force stable
-            mike deploy --push --force $TAG_OR_BRANCH_NAME
-          fi
+          # if [ $TAG_OR_BRANCH_NAME = "main" ]; then
+          #   echo "Build and deploy the doc on main"
+          #   mike deploy --push --force main
+          # else
+          #   echo "Build and deploy the doc on $TAG_OR_BRANCH_NAME"
+
+          #   mike deploy --push --force stable
+          #   mike deploy --push --force $TAG_OR_BRANCH_NAME
+          # fi
