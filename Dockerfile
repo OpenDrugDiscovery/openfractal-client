@@ -1,4 +1,4 @@
-FROM ghcr.io/mamba-org/micromamba:1.4-jammy-cuda-12.1.1
+FROM ghcr.io/mamba-org/micromamba:1.4-jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -33,11 +33,6 @@ RUN apt update --fix-missing && \
 
 # Switch back to regular user
 USER $MAMBA_USER
-
-# If the base image ships with CUDA, we need to make sure
-# CONDA_OVERRIDE_CUDA is set so micromamba can find the right virtual
-# packages `__cuda` and so allow the installation of CUDA packages such as `pytorch-gpu`.
-ENV CONDA_OVERRIDE_CUDA=$CUDA_VERSION
 
 RUN mkdir -p $MAMBA_ROOT_PREFIX
 
