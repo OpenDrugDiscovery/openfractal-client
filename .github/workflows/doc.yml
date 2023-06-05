@@ -10,6 +10,9 @@ concurrency:
   group: doc-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   doc:
     runs-on: ubuntu-latest
@@ -43,14 +46,12 @@ jobs:
 
           TAG_OR_BRANCH_NAME=${GITHUB_REF##*/}
 
-          # NOTE(hadim): DISABLE FOR NOW SINCE THE REPO MUST BE MADE PUBLIC FIRST.
+          if [ $TAG_OR_BRANCH_NAME = "main" ]; then
+            echo "Build and deploy the doc on main"
+            mike deploy --push --force main
+          else
+            echo "Build and deploy the doc on $TAG_OR_BRANCH_NAME"
 
-          # if [ $TAG_OR_BRANCH_NAME = "main" ]; then
-          #   echo "Build and deploy the doc on main"
-          #   mike deploy --push --force main
-          # else
-          #   echo "Build and deploy the doc on $TAG_OR_BRANCH_NAME"
-
-          #   mike deploy --push --force stable
-          #   mike deploy --push --force $TAG_OR_BRANCH_NAME
-          # fi
+            mike deploy --push --force stable
+            mike deploy --push --force $TAG_OR_BRANCH_NAME
+          fi
