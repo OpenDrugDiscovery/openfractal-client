@@ -18,6 +18,7 @@ micromamba activate openfractal
 
 # Install the git version of QCPortal
 pip install --no-deps git+https://github.com/MolSSI/QCFractal.git@c00627258f9344b4b35a7583ee4a9cc5ff2de3e8#subdirectory=qcportal
+pip install --no-deps git+https://github.com/MolSSI/QCFractal.git@c00627258f9344b4b35a7583ee4a9cc5ff2de3e8#subdirectory=qcfractalcompute
 
 # Install openfractal-client lib
 pip install -e .
