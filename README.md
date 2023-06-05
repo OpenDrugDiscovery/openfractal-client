@@ -34,7 +34,7 @@ pytest
 
 ## Changelogs
 
-See the latest changelogs at [CHANGELOG.md](./CHANGELOG.md).
+See the latest changelogs at [CHANGELOGS.md](./CHANGELOGS.md).
 
 ## License
 
