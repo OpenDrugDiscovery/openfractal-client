@@ -36,7 +36,6 @@ jobs:
           create-args: >-
             pip
             semver
-            rever==0.5.1
             python-build
             setuptools_scm
 
@@ -74,19 +73,12 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - name: Perform the release with rever
-        run: |
-          rever ${{ inputs.release-version }}
-
       - name: Create and push git tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Tag the release
           git tag -a "${{ inputs.release-version }}" -m "Release version ${{ inputs.release-version }}"
-
-          # Push the commit from rever to main
-          git push origin main
 
           # Push the tags
           git push origin "${{ inputs.release-version }}"
