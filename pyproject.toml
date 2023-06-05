@@ -30,9 +30,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-"Source Code" = "https://github.com/openfractal/openfractal-client"
-"Bug Tracker" = "https://github.com/openfractal/openfractal-client/issues"
-Documentation = "https://github.com/openfractal/openfractal-client"
+"Source Code" = "https://github.com/OpenDrugDiscovery/openfractal-client"
+"Bug Tracker" = "https://github.com/OpenDrugDiscovery/openfractal-client/issues"
+Documentation = "https://github.com/OpenDrugDiscovery/openfractal-client"
 
 [tool.setuptools]
 include-package-data = true

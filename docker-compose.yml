@@ -3,7 +3,7 @@ services:
   opf_client:
     build:
       context: ./
-    image: ghcr.io/openfractal/openfractal-client:dev-local
+    image: ghcr.io/OpenDrugDiscovery/openfractal-client:dev-local
     # environment:
     #   # Server
     #   QCA_FRACTAL_URI: http://backend:7777

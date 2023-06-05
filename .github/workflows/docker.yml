@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/openfractal/openfractal-client
+          images: ghcr.io/OpenDrugDiscovery/openfractal-client
           tags: |
             type=ref,event=tag
             type=ref,event=branch

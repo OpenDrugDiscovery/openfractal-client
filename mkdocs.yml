@@ -1,7 +1,7 @@
 site_name: "openfractal-client"
 site_description: "A Python client based on QCPortal for Open Drug Discovery (ODD) QM large scale data generation."
-repo_url: "https://github.com/openfractal/openfractal-client"
-repo_name: "openfractal/openfractal-client"
+repo_url: "https://github.com/OpenDrugDiscovery/openfractal-client"
+repo_name: "OpenDrugDiscovery/openfractal-client"
 copyright: Copyright 2020 - 2023 Valence Discovery
 
 site_url: ""
