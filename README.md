@@ -8,6 +8,10 @@
 
 A Python client based on [QCPortal](https://github.com/MolSSI/QCFractal) for Open Drug Discovery (ODD) QM large scale data generation.
 
+## Usage
+
+TODO
+
 ## Development lifecycle
 
 ### Setup dev environment
