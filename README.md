@@ -4,6 +4,7 @@
 [![release](https://github.com/openfractal/openfractal-client/actions/workflows/release.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/release.yml)
 [![docker](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml)
 [![code-check](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml)
+[![doc](https://github.com/openfractal/openfractal-client/actions/workflows/doc.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/doc.yml)
 
 A Python client based on [QCPortal](https://github.com/MolSSI/QCFractal) for Open Drug Discovery (ODD) QM large scale data generation.
 
