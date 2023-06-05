@@ -1,7 +1,7 @@
 # openfractal-client
 
 [![test](https://github.com/openfractal/openfractal-client/actions/workflows/test.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/test.yml)
-[![release-new-version](https://github.com/openfractal/openfractal-client/actions/workflows/release-new-version.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/release-new-version.yml)
+[![release](https://github.com/openfractal/openfractal-client/actions/workflows/release.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/release.yml)
 [![docker](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/docker.yml)
 [![code-check](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml/badge.svg)](https://github.com/openfractal/openfractal-client/actions/workflows/code-check.yml)
 
