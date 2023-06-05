@@ -74,7 +74,6 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          outputFile: CHANGELOGS.md
 
       - name: Configure git
         run: |
