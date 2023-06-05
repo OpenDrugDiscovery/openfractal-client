@@ -53,6 +53,6 @@ include = '\.pyi?$'
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "--verbose --cov=openfractal_client"
+addopts = "--verbose"
 testpaths = ["tests"]
 filterwarnings = []
