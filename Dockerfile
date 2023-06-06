@@ -52,10 +52,6 @@ RUN micromamba create --yes --name $ENV_NAME -f /tmp/$ENV_FILE && micromamba cle
 # Activate base during the image build
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
-# Install the git version of qcportal and qcfractalcompute
-RUN pip install --no-deps git+https://github.com/MolSSI/QCFractal.git@c00627258f9344b4b35a7583ee4a9cc5ff2de3e8#subdirectory=qcportal
-RUN pip install --no-deps git+https://github.com/MolSSI/QCFractal.git@c00627258f9344b4b35a7583ee4a9cc5ff2de3e8#subdirectory=qcfractalcompute
-
 # Copy the entire app git repo to the container
 COPY --chown=$MAMBA_USER:$MAMBA_USER . $APP_FOLDER
 

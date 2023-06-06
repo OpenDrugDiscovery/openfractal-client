@@ -1,0 +1,17 @@
+server:
+  fractal_uri: http://127.0.0.1:7777
+  username: compute_user
+  password: compute_password
+  verify: false
+
+manager:
+  manager_name: manager_local
+  queue_tag: ["*"]
+
+common:
+  adapter: pool
+  tasks_per_worker: 1
+  cores_per_worker: 8
+  memory_per_worker: 16
+  max_workers: 4
+  retries: 2

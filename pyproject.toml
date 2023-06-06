@@ -29,6 +29,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+opfc = "openfractal_client.cli:app"
+
 [project.urls]
 "Source Code" = "https://github.com/OpenDrugDiscovery/openfractal-client"
 "Bug Tracker" = "https://github.com/OpenDrugDiscovery/openfractal-client/issues"
