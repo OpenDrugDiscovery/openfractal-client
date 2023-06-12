@@ -15,7 +15,6 @@ A Python client based on [QCPortal](https://github.com/MolSSI/QCFractal) for Ope
 | Name               | Comment                                                                                                 | API URL                                            | Dashboard URL |
 | ------------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------- |
 | `openfractal-test` | A test instance for learn how to use QCFractal. In case of reset, it will be communicated pro-actively. | <https://openfractal-test-pgzbs3yryq-uc.a.run.app> | _In progress_ |
-| `openfractal-dev`  | Might be destroyed at any time.                                                                         | <https://openfractal-dev-pgzbs3yryq-uc.a.run.app>  | _In progress_ |
 
 ### User accounts
 
