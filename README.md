@@ -17,6 +17,16 @@ A Python client based on [QCPortal](https://github.com/MolSSI/QCFractal) for Ope
 | `openfractal-test` | A test instance for learn how to use QCFractal. In case of reset, it will be communicated pro-actively. | <https://openfractal-test-pgzbs3yryq-uc.a.run.app> | _In progress_ |
 | `openfractal-dev`  | Might be destroyed at any time.                                                                         | <https://openfractal-dev-pgzbs3yryq-uc.a.run.app>  | _In progress_ |
 
+### User accounts
+
+To interact with any Openfractal instances, you must have a user account. Ask an administrator to create one for you. Here are the 5 roles you can have associated with your account:
+
+- Admin
+- Compute
+- Read
+- Submit
+- Monitor
+
 ## Usage and installation
 
 The two main libraries to interact with the Openfractal instances are:
