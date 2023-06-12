@@ -1,12 +1,12 @@
 server:
-  fractal_uri: http://127.0.0.1:7777
+  fractal_uri: https://openfractal-test-pgzbs3yryq-uc.a.run.app
   username: compute_user
   password: compute_password
   verify: false
 
 manager:
-  manager_name: manager_local
-  queue_tag: ["*"]
+  manager_name: manager_demo_local
+  queue_tag: ["demo_local"]
 
 common:
   adapter: pool
