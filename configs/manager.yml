@@ -1,12 +1,16 @@
 server:
   fractal_uri: https://openfractal-test-pgzbs3yryq-uc.a.run.app
-  username: compute_user
-  password: compute_password
-  verify: false
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
 
 manager:
+  # The name of the manager is used to identify the manager in the database.
+  # It's not unique but for each manager launched a unique name will be computed
+  # by the server.
   manager_name: manager_demo_local
+  # Tags are used to filter the tasks that will be sent to the manager.
   queue_tag: ["demo_local"]
+
 
 common:
   adapter: pool

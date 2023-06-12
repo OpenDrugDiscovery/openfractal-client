@@ -12,7 +12,7 @@ services:
       QCA_VERIFY: false
       # Manager
       MANAGER_NAME: demo_manager
-      QUEUE_TAGS: '["*"]'
+      QUEUE_TAGS: '["demo_local"]'
       # Common
       QCA_ADAPTER: pool
       QCA_TASKS_PER_WORKER: 1

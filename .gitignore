@@ -55,3 +55,4 @@ site/
 
 .idea/
 __pycache__
+timer.dat
