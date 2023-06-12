@@ -11,13 +11,17 @@
       
       
       
+        <link rel="prev" href="manager.html">
+      
+      
+        <link rel="next" href="../license.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Dev - openfractal-client</title>
+        <title>Export a Dataset - openfractal-client</title>
       
     
     
@@ -60,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#initialize-the-client-and-list-the-datasets" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dev
+              Export a Dataset
             
           </span>
         </div>
@@ -218,6 +227,129 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="submit_dataset.html" class="md-nav__link">
+        Submit a Dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="manager.html" class="md-nav__link">
+        Start a Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Export a Dataset
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="export_dataset.html" class="md-nav__link md-nav__link--active">
+        Export a Dataset
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-the-client-and-list-the-datasets" class="md-nav__link">
+    Initialize the client and list the datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-export-to-zarr" class="md-nav__link">
+    End-to-end export to Zarr
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     <li class="md-nav__item">
       <a href="../license.html" class="md-nav__link">
@@ -245,6 +377,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-the-client-and-list-the-datasets" class="md-nav__link">
+    Initialize the client and list the datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-export-to-zarr" class="md-nav__link">
+    End-to-end export to Zarr
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -261,7 +415,7 @@
   
 
 
-  <h1>Dev</h1>
+  <h1>Export a Dataset</h1>
 
 <script>
 (function (global, factory) {
@@ -423,6 +577,33 @@
           notice.hidden = true
         }, 1000)
       })
+</script><script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        
+        var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
+        
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
 </script>
 
 
@@ -1293,13 +1474,25 @@ Licensed under the Apache License, Version 2.0.
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --><div class="jupyter-wrapper"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div id="cell-id=f18af533-5ded-46bd-a6f4-b49d706e5bb8" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <!-- End of mathjax configuration --><div class="jupyter-wrapper">
+<div id="cell-id=1c715d1a-cc69-4eaf-a2fe-b04951fa0ce9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In this tutorial, you'll learn how to read and export records.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=f3364324-9975-4ce5-964d-50b120342f0c" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1314,9 +1507,576 @@ Licensed under the Apache License, Version 2.0.
                     </div>
                 </clipboard-copy>
             </div>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">cast</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">dotenv</span>
+
+<span class="kn">from</span> <span class="nn">tqdm.auto</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">import</span> <span class="nn">datamol</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">zarr</span>
+
+<span class="kn">from</span> <span class="nn">openff.toolkit</span> <span class="kn">import</span> <span class="n">Molecule</span>
+<span class="kn">import</span> <span class="nn">qcelemental</span> <span class="k">as</span> <span class="nn">qcel</span>
+<span class="kn">from</span> <span class="nn">qcportal</span> <span class="kn">import</span> <span class="n">PortalClient</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">dotenv</span><span class="o">.</span><span class="n">load_dotenv</span><span class="p">(</span><span class="s2">&quot;../../openfractal_test_secrets.env&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">%load_ext autoreload
+%autoreload 2
+
+from typing import cast
+
+import os
+import dotenv
+
+from tqdm.auto import tqdm
+
+import datamol as dm
+import pandas as pd
+
+import zarr
+
+from openff.toolkit import Molecule
+import qcelemental as qcel
+from qcportal import PortalClient
+
+_ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
+        
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div id="cell-id=1f9cb60b-430f-4705-ac13-3b5d83399915" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="initialize-the-client-and-list-the-datasets">Initialize the client and list the datasets<a class="anchor-link" href="#initialize-the-client-and-list-the-datasets">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=aadb9712-5c81-4e63-8541-3b5a0443ddab" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="zeroclipboard-container">
+                <clipboard-copy for="cell-2">
+                <div>
+                    <span class="notice" hidden>Copied!</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                    </svg>
+                    </div>
+                </clipboard-copy>
+            </div>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">PortalClient</span><span class="p">(</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;https://openfractal-test-pgzbs3yryq-uc.a.run.app&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENFRACTAL_USER_3_USERNAME&quot;</span><span class="p">],</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENFRACTAL_USER_3_PASSWORD&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">server_info</span>
+</pre></div>
+<div id="cell-2" class="clipboard-copy-txt">client = PortalClient(
+    address="https://openfractal-test-pgzbs3yryq-uc.a.run.app",
+    username=os.environ["OPENFRACTAL_USER_3_USERNAME"],
+    password=os.environ["OPENFRACTAL_USER_3_PASSWORD"],
+)
+
+client.server_info</div>
+        
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;name&#39;: &#39;openfractal-test&#39;,
+ &#39;manager_heartbeat_frequency&#39;: 10,
+ &#39;manager_heartbeat_max_missed&#39;: 5,
+ &#39;version&#39;: &#39;0.50b11.post13+gc0062725&#39;,
+ &#39;api_limits&#39;: {&#39;get_records&#39;: 1000,
+  &#39;add_records&#39;: 500,
+  &#39;get_dataset_entries&#39;: 2000,
+  &#39;get_molecules&#39;: 1000,
+  &#39;add_molecules&#39;: 1000,
+  &#39;get_managers&#39;: 1000,
+  &#39;manager_tasks_claim&#39;: 200,
+  &#39;manager_tasks_return&#39;: 10,
+  &#39;get_server_stats&#39;: 25,
+  &#39;get_access_logs&#39;: 1000,
+  &#39;get_error_logs&#39;: 100,
+  &#39;get_internal_jobs&#39;: 1000},
+ &#39;client_version_lower_limit&#39;: &#39;0.50b11&#39;,
+ &#39;client_version_upper_limit&#39;: &#39;1&#39;,
+ &#39;manager_version_lower_limit&#39;: &#39;0.50b11&#39;,
+ &#39;manager_version_upper_limit&#39;: &#39;1&#39;,
+ &#39;motd&#39;: &#39;&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div id="cell-id=5347e5da-7d4c-463d-ab83-173fd554c2f3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Let's list the available dataset.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=f49e9996-be6b-4174-b464-b580a18bc989" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="zeroclipboard-container">
+                <clipboard-copy for="cell-3">
+                <div>
+                    <span class="notice" hidden>Copied!</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                    </svg>
+                    </div>
+                </clipboard-copy>
+            </div>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">list_datasets</span><span class="p">()</span>
+</pre></div>
+<div id="cell-3" class="clipboard-copy-txt">client.list_datasets()</div>
+        
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div id="cell-id=48a834ca-e96e-429a-9b74-d5d5a5cda5f1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="end-to-end-export-to-zarr">End-to-end export to Zarr<a class="anchor-link" href="#end-to-end-export-to-zarr">&#182;</a></h2><p>The below function is opiniated en-to-end export pipeline. It's very opiniated and probably not optimal since many of the outputs are not stored as array.</p>
+<p>Use it as a guide to export and store only the relevant informations for your usecase.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=de0534e5-f5a9-460e-a63a-c632d9aab7f7" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="zeroclipboard-container">
+                <clipboard-copy for="cell-4">
+                <div>
+                    <span class="notice" hidden>Copied!</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                    </svg>
+                    </div>
+                </clipboard-copy>
+            </div>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="k">def</span> <span class="nf">export_dataset_to_zarr</span><span class="p">(</span>
+    <span class="n">client</span><span class="p">:</span> <span class="n">PortalClient</span><span class="p">,</span>
+    <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">dataset_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">chunksize</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1_000</span><span class="p">,</span>
+    <span class="n">progress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">progress_leave</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="c1"># This could be easily parallelized if we want to.</span>
+    <span class="c1"># Parallelization will not work if using ZIP.</span>
+
+    <span class="c1"># Get the dataset</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">dataset_type</span><span class="o">=</span><span class="n">dataset_type</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">)</span>
+
+    <span class="n">root</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">zarr</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
+    <span class="n">molecules_group</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s2">&quot;/molecules&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span>
+        <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">entry_names</span><span class="p">),</span> <span class="n">chunksize</span><span class="p">),</span>
+        <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="n">progress</span><span class="p">,</span>
+        <span class="n">leave</span><span class="o">=</span><span class="n">progress_leave</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="c1"># Pull completed records for those entry names</span>
+        <span class="n">chunk_entry_names</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">entry_names</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">chunksize</span><span class="p">]</span>
+        <span class="n">records</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">iterate_records</span><span class="p">(</span>
+            <span class="n">entry_names</span><span class="o">=</span><span class="n">chunk_entry_names</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="n">force_refetch</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">entry_name</span><span class="p">,</span> <span class="n">specification_name</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
+            <span class="c1"># Fetch molecule</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">molecule</span>
+            <span class="c1"># Fetch wavefunction</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">wavefunction</span>
+            <span class="c1"># Fetch compute_history</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">compute_history_</span>  <span class="c1"># consider not fetching it</span>
+
+            <span class="c1"># Get dict</span>
+            <span class="n">record_dict</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+
+            <span class="c1"># Get infos about the molecule (3D system)</span>
+            <span class="n">mol</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;molecule_&quot;</span><span class="p">]</span>
+
+            <span class="n">smiles</span> <span class="o">=</span> <span class="n">mol</span><span class="p">[</span><span class="s2">&quot;extras&quot;</span><span class="p">][</span><span class="s2">&quot;canonical_isomeric_explicit_hydrogen_mapped_smiles&quot;</span><span class="p">]</span>
+            <span class="n">molecule_hash</span> <span class="o">=</span> <span class="n">mol</span><span class="p">[</span><span class="s2">&quot;identifiers&quot;</span><span class="p">][</span><span class="s2">&quot;molecule_hash&quot;</span><span class="p">]</span>
+            <span class="n">conformations</span> <span class="o">=</span> <span class="n">mol</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span>
+
+            <span class="c1"># Get a group for that molecule</span>
+            <span class="k">if</span> <span class="n">molecule_hash</span> <span class="ow">in</span> <span class="n">molecules_group</span><span class="p">:</span>
+                <span class="n">molecule_group</span> <span class="o">=</span> <span class="n">molecules_group</span><span class="p">[</span><span class="n">molecule_hash</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">molecule_group</span> <span class="o">=</span> <span class="n">molecules_group</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="n">molecule_hash</span><span class="p">)</span>
+
+            <span class="c1"># Save infos about the molecule</span>
+            <span class="n">molecule_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;smiles&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">smiles</span>
+            <span class="n">molecule_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;molecule_hash&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">molecule_hash</span>
+            <span class="n">molecule_group</span><span class="p">[</span><span class="s2">&quot;conformations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">conformations</span>
+
+            <span class="c1"># Get group for all the specifications for that molecule</span>
+            <span class="k">if</span> <span class="s2">&quot;specifications&quot;</span> <span class="ow">in</span> <span class="n">molecule_group</span><span class="p">:</span>
+                <span class="n">specifications_group</span> <span class="o">=</span> <span class="n">molecule_group</span><span class="p">[</span><span class="s2">&quot;specifications&quot;</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">specifications_group</span> <span class="o">=</span> <span class="n">molecule_group</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s2">&quot;specifications&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Get a group for that specification</span>
+            <span class="k">if</span> <span class="n">specification_name</span> <span class="ow">in</span> <span class="n">specifications_group</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The specification &#39;</span><span class="si">{</span><span class="n">specification_name</span><span class="si">}</span><span class="s2">&#39; already exists.&quot;</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">specification_group</span> <span class="o">=</span> <span class="n">specifications_group</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span>
+                    <span class="n">specification_name</span>
+                <span class="p">)</span>
+
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;entry_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">entry_name</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;specification_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">specification_name</span>
+
+            <span class="c1"># Save the infos of the specification as attributes</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;record_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;record_type&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;is_service&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;is_service&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;extras&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;extras&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;manager_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;manager_name&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;created_on&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span>
+                <span class="s2">&quot;created_on&quot;</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;modified_on&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span>
+                <span class="s2">&quot;modified_on&quot;</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;owner_user&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;owner_user&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;owner_group&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;owner_group&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;compute_history_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span>
+                <span class="s2">&quot;compute_history_&quot;</span>
+            <span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;task_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;task_&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;service_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;service_&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;comments_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;comments_&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;native_files_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;native_files_&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;molecule_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;molecule_id&quot;</span><span class="p">]</span>
+
+            <span class="c1"># For now we save the QM properties and the wavefunction as attributes as well.</span>
+            <span class="c1"># This is obviously NOT IDEAL.</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;wavefunction_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;specification&quot;</span><span class="p">]</span>
+            <span class="n">specification_group</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">]</span>
+
+    <span class="c1"># Cleanup (only needed when zip file)</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">store</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">root</span>
+</pre></div>
+<div id="cell-4" class="clipboard-copy-txt">def export_dataset_to_zarr(
+    client: PortalClient,
+    dataset_name: str,
+    dataset_type: str,
+    output_file: str,
+    chunksize: int = 1_000,
+    progress: bool = True,
+    progress_leave: bool = False,
+):
+    # This could be easily parallelized if we want to.
+    # Parallelization will not work if using ZIP.
+
+    # Get the dataset
+    ds = client.get_dataset(dataset_type=dataset_type, dataset_name=dataset_name)
+
+    root = zarr.open(output_file, mode="w")
+    root = cast(zarr.Group, root)
+    molecules_group = root.create_group("/molecules")
+
+    for i in tqdm(
+        range(0, len(ds.entry_names), chunksize),
+        disable=not progress,
+        leave=progress_leave,
+    ):
+        # Pull completed records for those entry names
+        chunk_entry_names = ds.entry_names[i : i + chunksize]
+        records = ds.iterate_records(
+            entry_names=chunk_entry_names, status="complete", force_refetch=True
+        )
+
+        for entry_name, specification_name, record in records:
+            # Fetch molecule
+            record.molecule
+            # Fetch wavefunction
+            record.wavefunction
+            # Fetch compute_history
+            record.compute_history_  # consider not fetching it
+
+            # Get dict
+            record_dict = record.dict()
+
+            # Get infos about the molecule (3D system)
+            mol = record_dict["molecule_"]
+
+            smiles = mol["extras"]["canonical_isomeric_explicit_hydrogen_mapped_smiles"]
+            molecule_hash = mol["identifiers"]["molecule_hash"]
+            conformations = mol["geometry"]
+
+            # Get a group for that molecule
+            if molecule_hash in molecules_group:
+                molecule_group = molecules_group[molecule_hash]
+            else:
+                molecule_group = molecules_group.create_group(molecule_hash)
+
+            # Save infos about the molecule
+            molecule_group.attrs["smiles"] = smiles
+            molecule_group.attrs["molecule_hash"] = molecule_hash
+            molecule_group["conformations"] = conformations
+
+            # Get group for all the specifications for that molecule
+            if "specifications" in molecule_group:
+                specifications_group = molecule_group["specifications"]
+            else:
+                specifications_group = molecule_group.create_group("specifications")
+
+            # Get a group for that specification
+            if specification_name in specifications_group:
+                raise ValueError(
+                    f"The specification '{specification_name}' already exists."
+                )
+            else:
+                specification_group = specifications_group.create_group(
+                    specification_name
+                )
+
+            specification_group.attrs["entry_name"] = entry_name
+            specification_group.attrs["specification_name"] = specification_name
+
+            # Save the infos of the specification as attributes
+            specification_group.attrs["id"] = record_dict["id"]
+            specification_group.attrs["record_type"] = record_dict["record_type"]
+            specification_group.attrs["is_service"] = record_dict["is_service"]
+            specification_group.attrs["extras"] = record_dict["extras"]
+            specification_group.attrs["status"] = record_dict["status"]
+            specification_group.attrs["manager_name"] = record_dict["manager_name"]
+            specification_group.attrs["created_on"] = record_dict[
+                "created_on"
+            ].isoformat()
+            specification_group.attrs["modified_on"] = record_dict[
+                "modified_on"
+            ].isoformat()
+            specification_group.attrs["owner_user"] = record_dict["owner_user"]
+            specification_group.attrs["owner_group"] = record_dict["owner_group"]
+            specification_group.attrs["compute_history_"] = record_dict[
+                "compute_history_"
+            ]
+            specification_group.attrs["task_"] = record_dict["task_"]
+            specification_group.attrs["service_"] = record_dict["service_"]
+            specification_group.attrs["comments_"] = record_dict["comments_"]
+            specification_group.attrs["native_files_"] = record_dict["native_files_"]
+            specification_group.attrs["molecule_id"] = record_dict["molecule_id"]
+
+            # For now we save the QM properties and the wavefunction as attributes as well.
+            # This is obviously NOT IDEAL.
+            specification_group.attrs["wavefunction_"] = record_dict["specification"]
+            specification_group.attrs["properties"] = record_dict["properties"]
+
+    # Cleanup (only needed when zip file)
+    root.store.close()
+
+    return root</div>
+        
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=d8cb21db-4639-4406-8696-912ea465e55a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="zeroclipboard-container">
+                <clipboard-copy for="cell-5">
+                <div>
+                    <span class="notice" hidden>Copied!</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                    </svg>
+                    </div>
+                </clipboard-copy>
+            </div>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">export_dataset_to_zarr</span><span class="p">(</span>
+    <span class="n">client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span>
+    <span class="n">dataset_name</span><span class="o">=</span><span class="s2">&quot;dataset_1&quot;</span><span class="p">,</span>
+    <span class="n">dataset_type</span><span class="o">=</span><span class="s2">&quot;singlepoint&quot;</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">&quot;/home/hadim/Data/openfractal/export_test.zarr&quot;</span><span class="p">,</span>
+    <span class="n">chunksize</span><span class="o">=</span><span class="mi">1_000</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+<div id="cell-5" class="clipboard-copy-txt">root = export_dataset_to_zarr(
+    client=client,
+    dataset_name="dataset_1",
+    dataset_type="singlepoint",
+    output_file="/home/hadim/Data/openfractal/export_test.zarr",
+    chunksize=1_000,
+)</div>
+        
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>  0%|          | 0/1 [00:00&lt;?, ?it/s]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=a51466f2-e38e-4bd4-9fb5-cd4a49af42e9" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="zeroclipboard-container">
+                <clipboard-copy for="cell-6">
+                <div>
+                    <span class="notice" hidden>Copied!</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                    </svg>
+                    </div>
+                </clipboard-copy>
+            </div>
             <div class="highlight-ipynb hl-python "><pre><span></span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt"></div>
+<div id="cell-6" class="clipboard-copy-txt"></div>
         
         </div>
     </div>
