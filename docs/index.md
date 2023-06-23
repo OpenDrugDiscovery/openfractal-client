@@ -4,9 +4,11 @@
 
 ## Available Openfractal instances
 
-| Name               | Comment                                                                                                 | API URL                                            | Dashboard URL |
-| ------------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------- |
-| `openfractal-test` | A test instance for learn how to use QCFractal. In case of reset, it will be communicated pro-actively. | <https://openfractal-test-pgzbs3yryq-uc.a.run.app> | _In progress_ |
+| Name               | Comment                                                                                                 | API URL                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `openfractal-test` | A test instance for learn how to use QCFractal. In case of reset, it will be communicated pro-actively. | <https://openfractal-test-pgzbs3yryq-uc.a.run.app> |
+
+Oepnfractal Dashboard: <https://openfractal-backend.vercel.app/>
 
 ### User accounts
 
