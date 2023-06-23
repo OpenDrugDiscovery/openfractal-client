@@ -15,9 +15,9 @@ strict: true
 nav:
   - Overview: index.md
   - Tutorials:
-    - Submit a Dataset: tutorials/submit_dataset.ipynb
-    - Start a Manager: tutorials/manager.ipynb
-    - Export a Dataset: tutorials/export_dataset.ipynb
+      - Submit a Dataset: tutorials/01_submit_dataset.ipynb
+      - Execute a Manager: tutorials/02_execute_manager.ipynb
+      - Export a Dataset: tutorials/03_export_dataset.ipynb
   - License: license.md
 
 theme:
