@@ -74,6 +74,8 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          toTag: "main"
 
       - name: Configure git
         run: |
@@ -110,3 +112,12 @@ jobs:
         with:
           tag_name: ${{ inputs.release-version }}
           body: ${{steps.github_release.outputs.changelog}}
+
+      - name: Deploy the doc
+        run: |
+          echo "Get the gh-pages branch"
+          git fetch origin gh-pages
+
+          echo "Build and deploy the doc on ${{ inputs.release-version }}"
+          mike deploy --push --force stable
+          mike deploy --push --force ${{ inputs.release-version }}
