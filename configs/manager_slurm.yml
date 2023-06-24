@@ -37,7 +37,7 @@ executors:
     memory_per_worker: 16 # GB
     extra_executor_options: {}
 
-    # Specific options for the local executor.
+    # Specific options for the SLURM executor.
     walltime: "1:00:00"
     exclusive: false
     partition: null
