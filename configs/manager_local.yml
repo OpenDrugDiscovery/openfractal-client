@@ -32,7 +32,7 @@ executors:
     # Common to all executors.
 
     # Tags are used to filter the tasks that will be sent to the manager.
-    queue_tags: ["demo"]
+    queue_tags: ["demo_local"]
     worker_init: []
     scratch_directory: null
     bind_address: null
