@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launch-a-manager" class="md-skip">
+        <a href="#launch-a-manager-local" class="md-skip">
           Skip to content
         </a>
       
@@ -302,8 +302,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#launch-a-manager" class="md-nav__link">
-    Launch a manager
+  <a href="#launch-a-manager-local" class="md-nav__link">
+    Launch a manager: local
   </a>
   
 </li>
@@ -317,6 +317,33 @@
       
         <li class="md-nav__item">
   <a href="#how-and-where-to-detect-the-qm-softwares" class="md-nav__link">
+    How and where to detect the QM softwares.
+  </a>
+  
+    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-a-manager-slurm" class="md-nav__link">
+    Launch a manager: SLURM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-to-connect-to-the-fractal-server_1" class="md-nav__link">
+    Settings to connect to the Fractal Server.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-and-where-to-detect-the-qm-softwares_1" class="md-nav__link">
     How and where to detect the QM softwares.
   </a>
   
@@ -411,8 +438,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#launch-a-manager" class="md-nav__link">
-    Launch a manager
+  <a href="#launch-a-manager-local" class="md-nav__link">
+    Launch a manager: local
   </a>
   
 </li>
@@ -426,6 +453,33 @@
       
         <li class="md-nav__item">
   <a href="#how-and-where-to-detect-the-qm-softwares" class="md-nav__link">
+    How and where to detect the QM softwares.
+  </a>
+  
+    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-a-manager-slurm" class="md-nav__link">
+    Launch a manager: SLURM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-to-connect-to-the-fractal-server_1" class="md-nav__link">
+    Settings to connect to the Fractal Server.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-and-where-to-detect-the-qm-softwares_1" class="md-nav__link">
     How and where to detect the QM softwares.
   </a>
   
@@ -1597,8 +1651,8 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="launch-a-manager">Launch a manager<a class="anchor-link" href="#launch-a-manager">&#182;</a></h2><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
-<p>You first need to create a YAML config file <code>manager_test.yml</code>:</p>
+<h2 id="launch-a-manager-local">Launch a manager: local<a class="anchor-link" href="#launch-a-manager-local">&#182;</a></h2><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
+<p>You first need to create a YAML config file <code>manager_local.yml</code>:</p>
 <div class="highlight"><pre><span></span><span class="nt">base_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/qcf_compute</span>
 
 <span class="nt">cluster</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manager_demo_local_1</span>
@@ -1640,7 +1694,67 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 <span class="w">    </span><span class="nt">max_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 </pre></div>
 <p>Then you can start a manager with:</p>
-<div class="highlight"><pre><span></span>qcfractal-compute-manager<span class="w"> </span>--config<span class="w"> </span>manager_test.yml
+<div class="highlight"><pre><span></span>qcfractal-compute-manager<span class="w"> </span>--config<span class="w"> </span>manager_local.yml
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="cell-id=a7b8d866" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="launch-a-manager-slurm">Launch a manager: SLURM<a class="anchor-link" href="#launch-a-manager-slurm">&#182;</a></h2><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
+<p>You first need to create a YAML config file <code>manager_slurm.yml</code>:</p>
+<div class="highlight"><pre><span></span><span class="nt">base_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/qcf_compute</span>
+
+<span class="nt">cluster</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manager_demo_slurm_1</span>
+
+<span class="nt">loglevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="nt">logfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+
+<span class="nt">update_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+
+<span class="c1"># Settings to connect to the Fractal Server.</span>
+<span class="nt">server</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">fractal_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://openfractal-test-pgzbs3yryq-uc.a.run.app</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_USERNAME</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_PASSWORD</span>
+<span class="w">  </span><span class="nt">verify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="c1"># How and where to detect the QM softwares.</span>
+<span class="nt">environments</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">use_manager_environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">conda</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">apptainer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+
+<span class="nt">executors</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">slurm</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slurm</span>
+
+<span class="w">    </span><span class="c1"># Common to all executors.</span>
+<span class="w">    </span><span class="nt">queue_tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;demo_tutorial&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">worker_init</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">    </span><span class="nt">scratch_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">bind_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<span class="w">    </span><span class="nt">cores_per_worker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">    </span><span class="nt">memory_per_worker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span><span class="w"> </span><span class="c1"># GB</span>
+<span class="w">    </span><span class="nt">extra_executor_options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+
+<span class="w">    </span><span class="c1"># Specific options for the local executor.</span>
+<span class="w">    </span><span class="nt">walltime</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1:00:00&quot;</span>
+<span class="w">    </span><span class="nt">exclusive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">partition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">workers_per_node</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">max_nodes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">scheduler_options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+<p>Then you can start a manager with:</p>
+<div class="highlight"><pre><span></span>qcfractal-compute-manager<span class="w"> </span>--config<span class="w"> </span>manager_slurm.yml
 </pre></div>
 
 </div>
