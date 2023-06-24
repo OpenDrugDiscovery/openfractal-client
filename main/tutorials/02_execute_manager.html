@@ -328,6 +328,26 @@
     Docker
   </a>
   
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-docker-compose" class="md-nav__link">
+    With docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-docker" class="md-nav__link">
+    With docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -443,6 +463,26 @@
   <a href="#docker" class="md-nav__link">
     Docker
   </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-docker-compose" class="md-nav__link">
+    With docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-docker" class="md-nav__link">
+    With docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1735,11 +1775,12 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="docker">Docker<a class="anchor-link" href="#docker">&#182;</a></h3><p>You can use the following docker-compose configuration:</p>
+<h3 id="docker">Docker<a class="anchor-link" href="#docker">&#182;</a></h3><h4 id="with-docker-compose">With <code>docker-compose</code><a class="anchor-link" href="#with-docker-compose">&#182;</a></h4><p>You can use the following docker-compose configuration:</p>
 <div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 <span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">opf_client</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">opf_manager</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/opendrugdiscovery/openfractal-client:main</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qcfractal-compute-manager</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># General</span>
 <span class="w">      </span><span class="nt">QCF_COMPUTE_BASE_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/</span>
@@ -1757,7 +1798,34 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 <span class="w">      </span><span class="nt">QCF_COMPUTE_ENVIRONMENTS_CONDA</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[]&quot;</span>
 <span class="w">      </span><span class="nt">QCF_COMPUTE_ENVIRONMENTS_APPTAINER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[]&quot;</span>
 <span class="w">      </span><span class="c1"># Executors</span>
-<span class="w">      </span><span class="nt">QCF_COMPUTE_EXECUTORS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{&quot;local&quot;:</span><span class="nv"> </span><span class="s">{&quot;type&quot;:</span><span class="nv"> </span><span class="s">&quot;local&quot;,</span><span class="nv"> </span><span class="s">&quot;queue_tags&quot;:</span><span class="nv"> </span><span class="s">[&quot;demo&quot;],</span><span class="nv"> </span><span class="s">&quot;cores_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;memory_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;max_workers&quot;:</span><span class="nv"> </span><span class="s">4}}&#39;</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_EXECUTORS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{&quot;local&quot;:</span><span class="nv"> </span><span class="s">{&quot;type&quot;:</span><span class="nv"> </span><span class="s">&quot;local&quot;,</span><span class="nv"> </span><span class="s">&quot;queue_tags&quot;:</span><span class="nv"> </span><span class="s">[&quot;demo_tutorial&quot;],</span><span class="nv"> </span><span class="s">&quot;cores_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;memory_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;max_workers&quot;:</span><span class="nv"> </span><span class="s">4}}&#39;</span>
+</pre></div>
+<p>Then execute the container with:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Execute in the background</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+
+<span class="w"> </span><span class="c1"># Check logs</span>
+docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+
+<span class="w"> </span><span class="c1"># Shutdown the manager</span>
+docker-compose<span class="w"> </span>down
+</pre></div>
+<h4 id="with-docker">With <code>docker</code><a class="anchor-link" href="#with-docker">&#182;</a></h4><p>It is recommended and often more convenient to use <code>docker-compose</code>. If you prefer to use <code>docker</code>:</p>
+<div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-ti<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_BASE_FOLDER</span><span class="o">=</span><span class="s2">&quot;/tmp/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_CLUSTER</span><span class="o">=</span><span class="s2">&quot;manager_demo_1&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_LOGLEVEL</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_UPDATE_FREQUENCY</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER</span><span class="o">=</span><span class="s2">&quot;{}&quot;</span><span class="w">  </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_FRACTAL_URI</span><span class="o">=</span><span class="s2">&quot;https://openfractal-test-pgzbs3yryq-uc.a.run.app&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_USERNAME</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_PASSWORD</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_VERIFY</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_USE_MANAGER_ENVIRONMENT</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_CONDA</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_APPTAINER</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_EXECUTORS</span><span class="o">=</span><span class="s1">&#39;{&quot;local&quot;: {&quot;type&quot;: &quot;local&quot;, &quot;queue_tags&quot;: [&quot;demo_tutorial&quot;], &quot;cores_per_worker&quot;: 16, &quot;memory_per_worker&quot;: 16, &quot;max_workers&quot;: 4}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ghcr.io/opendrugdiscovery/openfractal-client:main<span class="w"> </span>qcfractal-compute-manager
 </pre></div>
 
 </div>
