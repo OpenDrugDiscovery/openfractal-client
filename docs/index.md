@@ -45,7 +45,7 @@ For now here is a minimal Conda `env.yml` file you can use to perform the instal
 
 ```yaml
 channels:
-  - hadim/label/qcportal_next_2
+  - hadim/label/qcportal_next
   - conda-forge/label/libint_dev # for psi4
   - conda-forge
 
@@ -54,8 +54,8 @@ dependencies:
   - pip
 
   # QCPortal deps
-  - hadim/label/qcportal_next_2::qcportal
-  - hadim/label/qcportal_next_2::qcfractalcompute
+  - hadim/label/qcportal_next::qcportal
+  - hadim/label/qcportal_next::qcfractalcompute
 
   # Compute managers
   - parsl
