@@ -21,7 +21,7 @@
     
     
       
-        <title>Settings to connect to the Fractal Server. - openfractal-client</title>
+        <title>Execute a Manager - openfractal-client</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launch-a-manager-local" class="md-skip">
+        <a href="#launch-a-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Settings to connect to the Fractal Server.
+              Execute a Manager
             
           </span>
         </div>
@@ -227,6 +227,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -236,17 +251,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Tutorials
         </label>
@@ -280,12 +295,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Settings to connect to the Fractal Server.
+          Execute a Manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="02_execute_manager.html" class="md-nav__link md-nav__link--active">
-        Settings to connect to the Fractal Server.
+        Execute a Manager
       </a>
       
         
@@ -302,30 +317,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#launch-a-manager-local" class="md-nav__link">
-    Launch a manager: local
+  <a href="#launch-a-manager" class="md-nav__link">
+    Launch a Manager
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-to-connect-to-the-fractal-server" class="md-nav__link">
-    Settings to connect to the Fractal Server.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-and-where-to-detect-the-qm-softwares" class="md-nav__link">
-    How and where to detect the QM softwares.
-  </a>
-  
-    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
+    <nav class="md-nav" aria-label="Launch a Manager">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launch-a-manager-slurm" class="md-nav__link">
-    Launch a manager: SLURM
+  <a href="#local" class="md-nav__link">
+    Local
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm" class="md-nav__link">
+    SLURM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-docker-compose" class="md-nav__link">
+    With docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-docker" class="md-nav__link">
+    With docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#huggingface-space" class="md-nav__link">
+    HuggingFace Space
   </a>
   
 </li>
@@ -336,36 +378,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#settings-to-connect-to-the-fractal-server_1" class="md-nav__link">
-    Settings to connect to the Fractal Server.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-and-where-to-detect-the-qm-softwares_1" class="md-nav__link">
-    How and where to detect the QM softwares.
-  </a>
-  
-    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#monitor-the-managers" class="md-nav__link">
     Monitor the managers
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#monitor-your-dataset" class="md-nav__link">
     Monitor your dataset
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -438,30 +460,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#launch-a-manager-local" class="md-nav__link">
-    Launch a manager: local
+  <a href="#launch-a-manager" class="md-nav__link">
+    Launch a Manager
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-to-connect-to-the-fractal-server" class="md-nav__link">
-    Settings to connect to the Fractal Server.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-and-where-to-detect-the-qm-softwares" class="md-nav__link">
-    How and where to detect the QM softwares.
-  </a>
-  
-    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
+    <nav class="md-nav" aria-label="Launch a Manager">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launch-a-manager-slurm" class="md-nav__link">
-    Launch a manager: SLURM
+  <a href="#local" class="md-nav__link">
+    Local
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm" class="md-nav__link">
+    SLURM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-docker-compose" class="md-nav__link">
+    With docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-docker" class="md-nav__link">
+    With docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#huggingface-space" class="md-nav__link">
+    HuggingFace Space
   </a>
   
 </li>
@@ -472,36 +521,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#settings-to-connect-to-the-fractal-server_1" class="md-nav__link">
-    Settings to connect to the Fractal Server.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-and-where-to-detect-the-qm-softwares_1" class="md-nav__link">
-    How and where to detect the QM softwares.
-  </a>
-  
-    <nav class="md-nav" aria-label="How and where to detect the QM softwares.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#monitor-the-managers" class="md-nav__link">
     Monitor the managers
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#monitor-your-dataset" class="md-nav__link">
     Monitor your dataset
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -523,7 +552,7 @@
   
 
 
-  <h1>Settings to connect to the Fractal Server.</h1>
+  <h1>Execute a Manager</h1>
 
 <script>
 (function (global, factory) {
@@ -1645,13 +1674,25 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 
 </div>
 </div>
+<div id="cell-id=58df69fe" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="launch-a-manager">Launch a Manager<a class="anchor-link" href="#launch-a-manager">&#182;</a></h2><p>A manager or a worker is responisble to receive jobs from a backend QCFractal server, execute those jobs and report the results to the backend server.</p>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=26b21668-89e4-4ddb-8721-635e246d2c58" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="launch-a-manager-local">Launch a manager: local<a class="anchor-link" href="#launch-a-manager-local">&#182;</a></h2><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
+<h3 id="local">Local<a class="anchor-link" href="#local">&#182;</a></h3><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
 <p>You first need to create a YAML config file <code>manager_local.yml</code>:</p>
 <div class="highlight"><pre><span></span><span class="nt">base_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/qcf_compute</span>
 
@@ -1662,14 +1703,12 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 
 <span class="nt">update_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="c1"># Settings to connect to the Fractal Server.</span>
 <span class="nt">server</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">fractal_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://openfractal-test-pgzbs3yryq-uc.a.run.app</span>
 <span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_USERNAME</span>
 <span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_PASSWORD</span>
 <span class="w">  </span><span class="nt">verify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
-<span class="c1"># How and where to detect the QM softwares.</span>
 <span class="nt">environments</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">use_manager_environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">conda</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
@@ -1707,7 +1746,7 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="launch-a-manager-slurm">Launch a manager: SLURM<a class="anchor-link" href="#launch-a-manager-slurm">&#182;</a></h2><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
+<h3 id="slurm">SLURM<a class="anchor-link" href="#slurm">&#182;</a></h3><p>A manager is a QM worker that will perform any QM calculations provided by an Openfractal instance.</p>
 <p>You first need to create a YAML config file <code>manager_slurm.yml</code>:</p>
 <div class="highlight"><pre><span></span><span class="nt">base_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/qcf_compute</span>
 
@@ -1718,14 +1757,12 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 
 <span class="nt">update_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 
-<span class="c1"># Settings to connect to the Fractal Server.</span>
 <span class="nt">server</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">fractal_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://openfractal-test-pgzbs3yryq-uc.a.run.app</span>
 <span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_USERNAME</span>
 <span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_PASSWORD</span>
 <span class="w">  </span><span class="nt">verify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
-<span class="c1"># How and where to detect the QM softwares.</span>
 <span class="nt">environments</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">use_manager_environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">conda</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
@@ -1744,7 +1781,7 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 <span class="w">    </span><span class="nt">memory_per_worker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span><span class="w"> </span><span class="c1"># GB</span>
 <span class="w">    </span><span class="nt">extra_executor_options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="w">    </span><span class="c1"># Specific options for the local executor.</span>
+<span class="w">    </span><span class="c1"># Specific options for the SLURM executor.</span>
 <span class="w">    </span><span class="nt">walltime</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1:00:00&quot;</span>
 <span class="w">    </span><span class="nt">exclusive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">partition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -1756,6 +1793,81 @@ _ = dotenv.load_dotenv("../../openfractal_test_secrets.env")</div>
 <p>Then you can start a manager with:</p>
 <div class="highlight"><pre><span></span>qcfractal-compute-manager<span class="w"> </span>--config<span class="w"> </span>manager_slurm.yml
 </pre></div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="cell-id=f408c10b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="docker">Docker<a class="anchor-link" href="#docker">&#182;</a></h3><h4 id="with-docker-compose">With <code>docker-compose</code><a class="anchor-link" href="#with-docker-compose">&#182;</a></h4><p>You can use the following docker-compose configuration:</p>
+<div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">opf_manager</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/opendrugdiscovery/openfractal-client:main</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qcfractal-compute-manager</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># General</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_BASE_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_CLUSTER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manager_demo_1</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_LOGLEVEL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_UPDATE_FREQUENCY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">      </span><span class="c1"># Server</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_SERVER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="w"> </span><span class="c1"># somehow this is needed....</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_SERVER_FRACTAL_URI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://openfractal-test-pgzbs3yryq-uc.a.run.app</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_SERVER_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_USERNAME</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_SERVER_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_PASSWORD</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_SERVER_VERIFY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="c1"># Environment</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_ENVIRONMENTS_USE_MANAGER_ENVIRONMENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_ENVIRONMENTS_CONDA</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[]&quot;</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_ENVIRONMENTS_APPTAINER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[]&quot;</span>
+<span class="w">      </span><span class="c1"># Executors</span>
+<span class="w">      </span><span class="nt">QCF_COMPUTE_EXECUTORS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{&quot;local&quot;:</span><span class="nv"> </span><span class="s">{&quot;type&quot;:</span><span class="nv"> </span><span class="s">&quot;local&quot;,</span><span class="nv"> </span><span class="s">&quot;queue_tags&quot;:</span><span class="nv"> </span><span class="s">[&quot;demo_tutorial&quot;],</span><span class="nv"> </span><span class="s">&quot;cores_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;memory_per_worker&quot;:</span><span class="nv"> </span><span class="s">16,</span><span class="nv"> </span><span class="s">&quot;max_workers&quot;:</span><span class="nv"> </span><span class="s">4}}&#39;</span>
+</pre></div>
+<p>Then execute the container with:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Execute in the background</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+
+<span class="w"> </span><span class="c1"># Check logs</span>
+docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+
+<span class="w"> </span><span class="c1"># Shutdown the manager</span>
+docker-compose<span class="w"> </span>down
+</pre></div>
+<h4 id="with-docker">With <code>docker</code><a class="anchor-link" href="#with-docker">&#182;</a></h4><p>It is recommended and often more convenient to use <code>docker-compose</code>. If you prefer to use <code>docker</code>:</p>
+<div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-ti<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_BASE_FOLDER</span><span class="o">=</span><span class="s2">&quot;/tmp/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_CLUSTER</span><span class="o">=</span><span class="s2">&quot;manager_demo_1&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_LOGLEVEL</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_UPDATE_FREQUENCY</span><span class="o">=</span><span class="s2">&quot;30&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER</span><span class="o">=</span><span class="s2">&quot;{}&quot;</span><span class="w">  </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_FRACTAL_URI</span><span class="o">=</span><span class="s2">&quot;https://openfractal-test-pgzbs3yryq-uc.a.run.app&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_USERNAME</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_PASSWORD</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_SERVER_VERIFY</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_USE_MANAGER_ENVIRONMENT</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_CONDA</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_ENVIRONMENTS_APPTAINER</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">QCF_COMPUTE_EXECUTORS</span><span class="o">=</span><span class="s1">&#39;{&quot;local&quot;: {&quot;type&quot;: &quot;local&quot;, &quot;queue_tags&quot;: [&quot;demo_tutorial&quot;], &quot;cores_per_worker&quot;: 16, &quot;memory_per_worker&quot;: 16, &quot;max_workers&quot;: 4}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ghcr.io/opendrugdiscovery/openfractal-client:main<span class="w"> </span>qcfractal-compute-manager
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="cell-id=3b389c00" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="huggingface-space">HuggingFace Space<a class="anchor-link" href="#huggingface-space">&#182;</a></h3><p>Follow the instructions at <a href="https://huggingface.co/spaces/hadim/openfractal-client-space/blob/main/README.md">https://huggingface.co/spaces/hadim/openfractal-client-space/blob/main/README.md</a>.</p>
 
 </div>
 </div>
@@ -2072,12 +2184,14 @@ managers</div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">dataset_name</span> <span class="o">=</span> <span class="s2">&quot;dataset_demo_4321690179&quot;</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="s2">&quot;singlepoint&quot;</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">)</span>
-<span class="n">ds</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
 </pre></div>
 <div id="cell-4" class="clipboard-copy-txt">dataset_name = "dataset_demo_4321690179"
 
 ds = client.get_dataset("singlepoint", dataset_name)
-ds</div>
+
+ds.dict()</div>
         
         </div>
     </div>
@@ -2197,12 +2311,29 @@ simple_qm_calculation_demo           4          6
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">records_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">query_records</span><span class="p">(</span><span class="n">dataset_id</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">id</span><span class="p">)):</span>
-    <span class="c1"># Access those objects to fetch them locally</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">error</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">wavefunction</span>
-    <span class="n">records_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">dict</span><span class="p">())</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">progress</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">status</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">fetch_error</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">fetch_wfn</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="n">records_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">spec_name</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">specification_names</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="n">progress</span><span class="p">):</span>
+    <span class="n">record_iterator</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">iterate_records</span><span class="p">(</span>
+        <span class="n">specification_names</span><span class="o">=</span><span class="n">spec_name</span><span class="p">,</span>
+        <span class="n">force_refetch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">fetch_updated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">record_iterator</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="n">progress</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">fetch_error</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">error</span>
+        <span class="k">if</span> <span class="n">fetch_wfn</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">wavefunction</span>  <span class="c1"># type: ignore</span>
+        <span class="n">record_dict</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+        <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;specification_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec_name</span>
+        <span class="n">records_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">record_dict</span><span class="p">)</span>
 
 <span class="n">records</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">records_list</span><span class="p">)</span>
 <span class="n">records</span> <span class="o">=</span> <span class="n">records</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
@@ -2210,12 +2341,29 @@ simple_qm_calculation_demo           4          6
 
 <span class="n">records</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">records_list = []
-for r in tqdm(client.query_records(dataset_id=ds.id)):
-    # Access those objects to fetch them locally
-    r.error
-    r.wavefunction
-    records_list.append(r.dict())
+<div id="cell-6" class="clipboard-copy-txt">progress = True
+status = None
+fetch_error = True
+fetch_wfn = True
+
+
+records_list = []
+for spec_name in tqdm(ds.specification_names, disable=not progress):
+    record_iterator = ds.iterate_records(
+        specification_names=spec_name,
+        force_refetch=True,
+        fetch_updated=True,
+        status=status,
+    )
+
+    for _, _, record in tqdm(record_iterator, disable=not progress, leave=False):
+        if fetch_error:
+            record.error
+        if fetch_wfn:
+            record.wavefunction  # type: ignore
+        record_dict = record.dict()
+        record_dict["specification_name"] = spec_name
+        records_list.append(record_dict)
 
 records = pd.DataFrame(records_list)
 records = records.sort_values("id")

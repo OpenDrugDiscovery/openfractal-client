@@ -227,6 +227,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -236,17 +251,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Tutorials
         </label>
@@ -273,7 +288,7 @@
   
     <li class="md-nav__item">
       <a href="02_execute_manager.html" class="md-nav__link">
-        Settings to connect to the Fractal Server.
+        Execute a Manager
       </a>
     </li>
   
@@ -1883,12 +1898,29 @@ simple_qm_calculation_demo           8        2
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">records_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">query_records</span><span class="p">(</span><span class="n">dataset_id</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">id</span><span class="p">)):</span>
-    <span class="c1"># Access those objects to fetch them locally</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">error</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">wavefunction</span>
-    <span class="n">records_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">dict</span><span class="p">())</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">progress</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">status</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">fetch_error</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">fetch_wfn</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="n">records_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">spec_name</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">specification_names</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="n">progress</span><span class="p">):</span>
+    <span class="n">record_iterator</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">iterate_records</span><span class="p">(</span>
+        <span class="n">specification_names</span><span class="o">=</span><span class="n">spec_name</span><span class="p">,</span>
+        <span class="n">force_refetch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">fetch_updated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">record_iterator</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="ow">not</span> <span class="n">progress</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">fetch_error</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">error</span>
+        <span class="k">if</span> <span class="n">fetch_wfn</span><span class="p">:</span>
+            <span class="n">record</span><span class="o">.</span><span class="n">wavefunction</span>  <span class="c1"># type: ignore</span>
+        <span class="n">record_dict</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+        <span class="n">record_dict</span><span class="p">[</span><span class="s2">&quot;specification_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spec_name</span>
+        <span class="n">records_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">record_dict</span><span class="p">)</span>
 
 <span class="n">records</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">records_list</span><span class="p">)</span>
 <span class="n">records</span> <span class="o">=</span> <span class="n">records</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
@@ -1896,12 +1928,29 @@ simple_qm_calculation_demo           8        2
 
 <span class="n">records</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">records_list = []
-for r in tqdm(client.query_records(dataset_id=ds.id)):
-    # Access those objects to fetch them locally
-    r.error
-    r.wavefunction
-    records_list.append(r.dict())
+<div id="cell-6" class="clipboard-copy-txt">progress = True
+status = None
+fetch_error = True
+fetch_wfn = True
+
+
+records_list = []
+for spec_name in tqdm(ds.specification_names, disable=not progress):
+    record_iterator = ds.iterate_records(
+        specification_names=spec_name,
+        force_refetch=True,
+        fetch_updated=True,
+        status=status,
+    )
+
+    for _, _, record in tqdm(record_iterator, disable=not progress, leave=False):
+        if fetch_error:
+            record.error
+        if fetch_wfn:
+            record.wavefunction  # type: ignore
+        record_dict = record.dict()
+        record_dict["specification_name"] = spec_name
+        records_list.append(record_dict)
 
 records = pd.DataFrame(records_list)
 records = records.sort_values("id")
