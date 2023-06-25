@@ -44,12 +44,12 @@ if [ -d "$OPENFRACTAL_CLIENT_PREFIX" ]; then
 	rm -fr ${OPENFRACTAL_CLIENT_PREFIX}
 fi
 
-# INSTALLER_URL="https://github.com/OpenDrugDiscovery/openfractal-client/releases/latest/download/OpenFractalClient-${PLATFORM}-${ARCH}.sh"
-# INSTALLER_PATH="/tmp/opfc_installer.sh"
-# wget ${INSTALLER_URL} -O ${INSTALLER_PATH}
+INSTALLER_URL="https://github.com/OpenDrugDiscovery/openfractal-client/releases/latest/download/OpenFractalClient-${PLATFORM}-${ARCH}.sh"
+INSTALLER_PATH="/tmp/opfc_installer.sh"
+wget ${INSTALLER_URL} -O ${INSTALLER_PATH}
 
 # NOTE(hadim): for dev and testing locally
-INSTALLER_PATH="build/OpenFractalClient-${PLATFORM}-${ARCH}.sh"
+# INSTALLER_PATH="build/OpenFractalClient-${PLATFORM}-${ARCH}.sh"
 
 bash ${INSTALLER_PATH} -b -p ${OPENFRACTAL_CLIENT_PREFIX}
 
