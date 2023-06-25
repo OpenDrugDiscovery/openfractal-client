@@ -1,5 +1,5 @@
 name: OpenFractalClient
-version: 0.0.0
+version: {{ environ.get('OPENFRACTAL_CLIENT_CONSTRUCTOR_VERSION', '0.0.0') }}
 
 channels:
   - hadim/label/qcportal_next

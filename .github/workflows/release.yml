@@ -107,11 +107,17 @@ jobs:
           password: ${{ secrets.PYPI_API_TOKEN }}
           packages-dir: dist/
 
+      - name: Build standalone installer
+        run: |
+          export OPENFRACTAL_CLIENT_CONSTRUCTOR_VERSION="${{ inputs.release-version }}"
+          CONDA_SOLVER=libmamba constructor --platform=linux-64 .
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         with:
           tag_name: ${{ inputs.release-version }}
           body: ${{steps.github_release.outputs.changelog}}
+          files: OpenFractalClient-*.sh
 
       - name: Deploy the doc
         run: |

@@ -21,25 +21,13 @@ if [[ "$OS" == "Darwin" ]]; then
 	fi
 fi
 
-echo "Hello!"
+OPENFRACTAL_CLIENT_PREFIX="$HOME/.local/share/openfractal-client"
 
-# mkdir -p ~/.local/bin
-# curl -Ls https://micro.mamba.pm/api/micromamba/$PLATFORM-$ARCH/latest | tar -xvj -C ~/.local/bin/ --strip-components=1 bin/micromamba
+# check if it exists
+# download the installer
+# perform installation
+# display message and instructions
 
-# if [ -t 0 ] ; then
-# 	printf "Init shell? [Y/n] "
-# 	read YES
-# 	printf "Prefix location? [~/micromamba] "
-# 	read PREFIXLOCATION
-# else
-# 	YES="yes";
-# 	PREFIXLOCATION="~/micromamba"
-# fi
+bash OpenFractalClient-0.0.0-Linux-x86_64.sh -b -p ${OPENFRACTAL_CLIENT_PREFIX}
 
-# if [[ "$PREFIXLOCATION" == "" ]]; then
-# 	PREFIXLOCATION="~/micromamba"
-# fi
-
-# if [[ "$YES" == "" || "$YES" == "y" || "$YES" == "Y" || "$YES" == "yes" ]]; then
-# 	~/.local/bin/micromamba shell init -p $PREFIXLOCATION
-# fi
+COMPUTE_MANAGER="${OPENFRACTAL_CLIENT_PREFIX}/bin/qcfractal-compute-manager"
