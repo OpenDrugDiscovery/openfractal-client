@@ -1,19 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
 ARCH=$(uname -m)
 OS=$(uname)
-
-ask() {
-	while true; do
-		read -p "$1 [y/N] " answer
-		case $(echo "$answer" | tr "[A-Z]" "[a-z]") in
-		y | yes)
-			return 0
-			;;
-		N | n | no | "")
-			exit 1
-			;;
-		esac
-	done
-}
 
 if [[ "$OS" == "Linux" ]]; then
 	PLATFORM="linux"
@@ -38,10 +28,10 @@ fi
 OPENFRACTAL_CLIENT_PREFIX="$HOME/.local/share/openfractal-client"
 
 if [ -d "$OPENFRACTAL_CLIENT_PREFIX" ]; then
-	ask "The directory $OPENFRACTAL_CLIENT_PREFIX already exists. Do you want to delete it and install a new version? "
-
-	echo "Removing ${OPENFRACTAL_CLIENT_PREFIX}"
-	rm -fr ${OPENFRACTAL_CLIENT_PREFIX}
+	echo "The directory $OPENFRACTAL_CLIENT_PREFIX already exists."
+	echo "If you want to perform a new installation, first delete the existing one with 'rm -fr ${OPENFRACTAL_CLIENT_PREFIX}'."
+	echo "Aborting installation."
+	exit 1
 fi
 
 INSTALLER_URL="https://github.com/OpenDrugDiscovery/openfractal-client/releases/latest/download/OpenFractalClient-${PLATFORM}-${ARCH}.sh"
