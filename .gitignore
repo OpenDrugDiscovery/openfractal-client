@@ -56,3 +56,5 @@ site/
 .idea/
 __pycache__
 timer.dat
+
+OpenFractalClient-*.sh

@@ -14,6 +14,7 @@ strict: true
 
 nav:
   - Overview: index.md
+  - Installation: installation.md
   - Tutorials:
       - Submit a Dataset: tutorials/01_submit_dataset.ipynb
       - Execute a Manager: tutorials/02_execute_manager.ipynb

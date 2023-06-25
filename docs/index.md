@@ -10,7 +10,7 @@
 
 Oepnfractal Dashboard: <https://openfractal-backend.vercel.app/>
 
-### User accounts
+## User accounts
 
 To interact with any Openfractal instances, you must have a user account. Ask an administrator to create one for you. Here are the 5 roles you can have associated with your account:
 
@@ -20,7 +20,7 @@ To interact with any Openfractal instances, you must have a user account. Ask an
 - Submit
 - Monitor
 
-## Usage and installation
+## Overview
 
 The two main libraries to interact with the Openfractal instances are:
 
@@ -29,56 +29,7 @@ The two main libraries to interact with the Openfractal instances are:
 
 For now the Python library of this repo `openfractal-client` does not contain any particular logic. The plan is to use it if we need custom logic related to openfractal moving forward.
 
-### Docker
+## Next Steps
 
-Public docker images are available at <https://github.com/OpenDrugDiscovery/openfractal-client/pkgs/container/openfractal-client>.
-
-```bash
-docker run --rm -ti ghcr.io/opendrugdiscovery/openfractal-client:main
-```
-
-### Using mamba
-
-The QCFractal libraries ecosystem have not yet been released. It is actively being developed in the `next` branch at <https://github.com/MolSSI/QCFractal/tree/next>.
-
-For now here is a minimal Conda `env.yml` file you can use to perform the installation (this will be simplified in the future):
-
-```yaml
-channels:
-  - hadim/label/qcportal_next
-  - conda-forge/label/libint_dev # for psi4
-  - conda-forge
-
-dependencies:
-  - python >=3.9
-  - pip
-
-  # QCPortal deps
-  - hadim/label/qcportal_next::qcportal
-  - hadim/label/qcportal_next::qcfractalcompute
-
-  # Compute managers
-  - parsl
-  - psi4 =1.8
-  - openmm
-  - openff-forcefields
-  - openmmforcefields
-
-  # Optional
-  - datamol
-  - openff-toolkit
-  - zarr
-
-  # Optional utilities
-  - loguru
-  - typer
-  - python-dotenv
-```
-
-Put the above YAML file into `env.yml`. Then:
-
-```bash
-micromamba create -n openfractal -f env.yml
-```
-
-_In the future, it will be as simple as `micromamba create -n openfractal openfractal-client`._
+- [Installation](./installation.md): Install the openfractal-client and its dependencies
+- [Tutorials](./tutorials/01_submit_dataset.ipynb): Work with datasets, execute manager, export generated data.

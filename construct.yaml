@@ -1,10 +1,17 @@
+name: OpenFractalClient
+version: 0.0.0
+
 channels:
   - hadim/label/qcportal_next
   - conda-forge/label/libint_dev # for psi4
   - conda-forge
 
-dependencies:
-  - python >=3.9
+write_condarc: True
+keep_pkgs: True
+transmute_file_type: .conda
+
+specs:
+  - python =3.10
   - pip
   - loguru
   - typer
@@ -26,26 +33,6 @@ dependencies:
   - openff-toolkit
   - zarr
 
-  # Packaging
-  - constructor
-  - conda-libmamba-solver
-
-  # Dev
-  - pytest >=6.0
-  - black >=23
-  - jupyterlab
-  - ipywidgets
-  - nglview
-  - ipytree
-  - nbconvert
-
-  # Doc
-  - mkdocs
-  - mkdocs-material >=7.1.1
-  - mkdocs-material-extensions
-  - mkdocstrings
-  - mkdocstrings-python
-  - mkdocs-jupyter
-  - markdown-include
-  - mdx_truly_sane_lists
-  - mike >=1.0.0
+installer_type: sh
+initialize_by_default: false
+register_python: False
