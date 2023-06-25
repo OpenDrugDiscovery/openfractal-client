@@ -57,4 +57,4 @@ site/
 __pycache__
 timer.dat
 
-OpenFractalClient-*.sh
+installers/

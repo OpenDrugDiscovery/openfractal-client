@@ -36,3 +36,4 @@ specs:
 installer_type: sh
 initialize_by_default: false
 register_python: False
+batch_mode: true

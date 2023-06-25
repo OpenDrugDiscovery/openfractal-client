@@ -34,11 +34,6 @@ jobs:
           environment-name: openfractal
           cache-environment: true
           cache-downloads: true
-          create-args: >-
-            pip
-            semver
-            python-build
-            setuptools_scm
 
       - name: Check the version is valid semver
         run: |
@@ -107,17 +102,11 @@ jobs:
           password: ${{ secrets.PYPI_API_TOKEN }}
           packages-dir: dist/
 
-      - name: Build standalone installer
-        run: |
-          export OPENFRACTAL_CLIENT_CONSTRUCTOR_VERSION="${{ inputs.release-version }}"
-          CONDA_SOLVER=libmamba constructor --platform=linux-64 .
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
         with:
           tag_name: ${{ inputs.release-version }}
           body: ${{steps.github_release.outputs.changelog}}
-          files: OpenFractalClient-*.sh
 
       - name: Deploy the doc
         run: |
@@ -127,3 +116,43 @@ jobs:
           echo "Build and deploy the doc on ${{ inputs.release-version }}"
           mike deploy --push --force stable
           mike deploy --push --force ${{ inputs.release-version }}
+
+  build-installer-linux:
+    needs: [release]
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.release-version }}
+
+      - name: Setup mamba
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: env.yml
+          environment-name: openfractal
+          cache-environment: true
+          cache-downloads: true
+
+      - name: Build the wheel and sdist
+        run: python -m build --no-isolation
+
+      - name: Build standalone installer
+        run: |
+          export OPENFRACTAL_CLIENT_CONSTRUCTOR_VERSION="${{ inputs.release-version }}"
+          bash ./scripts/build_installer.sh
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+        with:
+          tag_name: ${{ inputs.release-version }}
+          files: |
+            ./build/*.sh
+            ./build/*.sha256

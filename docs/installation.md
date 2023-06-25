@@ -5,7 +5,7 @@
 For participating to the data generation effort only. If you want to interact with the datasets or submit datasets yourself, you must use one of the other installation methods.
 
 ```bash
-curl https://raw.githubusercontent.com/OpenDrugDiscovery/openfractal-client/main/auto_install.sh | bash
+curl https://raw.githubusercontent.com/OpenDrugDiscovery/openfractal-client/main/scripts/auto_install.sh | bash
 ```
 
 ## Docker
