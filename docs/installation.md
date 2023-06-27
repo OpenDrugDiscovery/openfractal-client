@@ -36,12 +36,14 @@ dependencies:
   - hadim/label/qcportal_next::qcportal
   - hadim/label/qcportal_next::qcfractalcompute
 
-  # Compute managers
+  # Compute managers and engines
   - parsl
   - psi4 =1.8
   - openmm
   - openff-forcefields
   - openmmforcefields
+  - dftd3-python  # not available on osx-*
+  - xtb
 
   # Optional
   - datamol
