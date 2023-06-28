@@ -42,7 +42,7 @@ dependencies:
   - openmm
   - openff-forcefields
   - openmmforcefields
-  - dftd3-python  # not available on osx-*
+  - dftd3-python
   - xtb
 
   # Optional
